@@ -1,0 +1,13 @@
+🧾 Final Summary
+Total Expenses: $1.00
+Remaining Income: $9.00
+Expenses by Category:
+  Groceries: $1.00
+  Transport: $0.00
+  Entertainment: $0.00
+  Rent: $0.00
+  Utilities: $0.00
+  Shopping: $0.00
+
+Other:
+  Total: $0.00
