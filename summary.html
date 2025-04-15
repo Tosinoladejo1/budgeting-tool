@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>{{ username }}'s Expense Summary</h2>
+<table class="table table-dark table-striped mt-4">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Amount</th>
+      <th>Description</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for cat, amt, desc, dt in expenses %}
+      <tr>
+        <td>{{ cat }}</td>
+        <td>${{ '%.2f'|format(amt) }}</td>
+        <td>{{ desc }}</td>
+        <td>{{ dt }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<a href="/" class="btn btn-outline-light mt-3">← Back</a>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Welcome, {{ username }} 👋</h2>
+<p class="mt-3">Ready to track your expenses?</p>
+<form method="POST" action="/add-expense" class="mt-4">
+  <div class="mb-3">
+    <label class="form-label">Category</label>
+    <select class="form-select" name="category" required>
+      <option value="Groceries">Groceries</option>
+      <option value="Transport">Transport</option>
+      <option value="Entertainment">Entertainment</option>
+      <option value="Rent">Rent</option>
+      <option value="Utilities">Utilities</option>
+      <option value="Shopping">Shopping</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Amount</label>
+    <input name="amount" type="number" step="0.01" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Description (optional)</label>
+    <input name="description" type="text" class="form-control">
+  </div>
+  <button class="btn btn-warning">Add Expense</button>
+  <a href="/summary" class="btn btn-secondary ms-2">View Summary</a>
+</form>
+{% endblock %}
